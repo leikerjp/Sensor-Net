@@ -1,0 +1,6 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for sensor in sensors %}
+        <a class="nav-item nav-link" href="{{ url_for('measurements', id=sensor.id) }}">{{ sensor }}</a>
+    {% endfor %}
+{% endblock content %}
